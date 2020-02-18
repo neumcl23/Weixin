@@ -36,6 +36,7 @@ public class CheckUtil {
 
 		try {
 			MessageDigest mdTemp = MessageDigest.getInstance("SHA1");
+			String test="ddd.txt";
 			mdTemp.update(str.getBytes("UTF-8"));
 
 			byte[] md = mdTemp.digest();
@@ -45,7 +46,10 @@ public class CheckUtil {
 			for (int i = 0; i < j; i++) {
 				byte byte0 = md[i];
 				buf[k++] = hexDigits[byte0 >>> 4 & 0xf];
-				buf[k++] = hexDigits[byte0 & 0xf];
+				if(test.contains("ddd")){
+					buf[k++] = hexDigits[byte0 & 0xf];
+				}
+				
 			}
 			return new String(buf);
 		} catch (Exception e) {
