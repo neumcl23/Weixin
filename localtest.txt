@@ -1,0 +1,52 @@
+		if(caseName.contains("TIME")){
+			log.info("【product_date】格式非【YYYY-MM-DD】,数据库值插入为空"+NormalproductDate);
+		}else{
+			log.info("查询结果不一致，字段名为【商品生产日期===product_date】");
+			result="【product_date】原始报文值"+NormalproductDate;
+			return result;
+		}
+		
+		
+2.2B审核，正则提取：订单全部审核成功！
+
+
+
+
+===========================================
+
+265  pom.xml
+<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng_wms_b2c_process_test.xml</suiteXmlFile>	
+						<suiteXmlFile>testng_wms.xml</suiteXmlFile>					
+					</suiteXmlFiles>
+</configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
